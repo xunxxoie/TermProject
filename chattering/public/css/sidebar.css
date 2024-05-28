@@ -1,0 +1,76 @@
+/*⭐️Sidebar Design⭐️*/
+.sidebar {
+  background-color: #074cbc;
+  border-right: 1px solid #000;
+  height: calc(100vh - 60px);
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-nav {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  list-style-type: none;
+}
+
+.sidebar-nav li {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+  color: #FCAF18;
+  cursor: pointer;
+  display: block;
+  padding: 15px 0;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.sidebar-nav a:hover {
+  background-color: #003f88;
+}
+
+.sidebar-nav a.active {
+  background-color: #003f88;
+}
+
+.sidebar-nav a span {
+  display: block;
+  font-size: 14px;
+  color: #ffd700;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 10px 0;
+  text-align: center;
+  color: #ffd700;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+  width: 100%;
+}
+
+.sidebar-footer a {
+  color: #ffd700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.sidebar-footer a:hover {
+  color: #fff;
+}

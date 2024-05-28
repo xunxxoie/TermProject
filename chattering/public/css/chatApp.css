@@ -1,0 +1,178 @@
+.chat-app {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px); 
+  position: fixed; 
+  top: 60px; 
+  width: calc(100% - 600px); 
+  left: 600px; 
+  z-index: 1; 
+}
+
+.chat-room-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.chat-room-name {
+  text-align: center;
+  font-size: 1.5em;
+  flex-grow: 1;
+  font-weight: bold;
+}
+
+.chat-room-controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.chat-room-controls .users {
+  margin-left: 0px;
+}
+
+.chat-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative; 
+}
+
+.chat-main-content {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/*⭐️Message Design⭐️*/
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  position: relative; 
+}
+
+.messages::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url('/Dweb.png') no-repeat center center;
+  background-size: 100%;
+  width: 50%;
+  height: 50%;
+  opacity: 0.2; 
+  pointer-events: none; 
+}
+
+.message_form {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.message_form input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 40%;
+  word-break: break-word;
+}
+
+.current-user {
+  background-color: #a1a7f3;
+  align-self: flex-end;
+  margin-left: auto;
+  border-top-right-radius: 0;
+}
+
+.other-user {
+  background-color: #f0e9b4;
+  align-self: flex-start;
+  margin-right: auto;
+  border-top-left-radius: 0;
+}
+
+.message-content {
+  margin-bottom: 5px;
+}
+
+.timestamp {
+  font-size: 0.8em;
+  color: #888;
+  align-self: flex-end;
+}
+
+.message strong {
+  margin-right: 10px;
+}
+
+/*⭐️User Design⭐️*/
+.users {
+  margin: 10px;
+}
+
+.users h3 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.users ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+}
+
+.users li {
+  padding: 8px 12px;
+  font-size: 1em;
+  border: 1px solid #d1d1d1;
+  border-radius: 20px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.users li:hover {
+  background-color: #ececec;
+  border-color: #c1c1c1;
+}
+
+.users li:active {
+  background-color: #e0e0e0;
+  border-color: #b1b1b1;
+}
+
+.ChangeNameinput{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 15px;
+}
